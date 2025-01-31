@@ -6,13 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-<?php
+<form method="POST">
+    <input type="text" name="color" placeholder="car color"><br><br>
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $color = $_POST['color'];
-        $make = $_POST['make'];
-        $model = $_POST['model'];
-    }
+    <input type="text" name="make" placeholder="car make"><br><br>
+
+    <input type="text" name="model" placeholder="car model"><br><br>
+
+    <input type="submit" value="check Car">
+</form><br>
+<?php
     // Parent class
     class Vehicle {
         public $color;
@@ -43,23 +46,17 @@
         }
     }
 
-    // Instantiate a Car object
-    $myCar = new Car("Red", "Honda", "Civic");
-    $myCar->displayColor(); // From parent class
-    $myCar->displayInfo(); // Overridden method from child class
+    
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $color = $_POST['color'];
+        $make = $_POST['make'];
+        $model = $_POST['model'];
+
+        // Instantiate a Car object
+        $myCar = new Car($color, $make, $model);
+        $myCar->displayColor(); // From parent class
+        $myCar->displayInfo(); // Overridden method from child class
+    }
 ?>
-
-<form method="POST">
-    <label for="car color">car color</label>
-    <input type="text" name="color"><br><br>
-
-    <label for="car make">car make</label>
-    <input type="text" name="make"><br>
-
-    <label for="car model">car model</label>
-    <input type="text" name="model"><br><br>
-
-    <input type="submit" value="check Car">
-</form>
 </body>
 </html>
