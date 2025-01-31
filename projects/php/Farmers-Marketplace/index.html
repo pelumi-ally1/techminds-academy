@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Farmers' Marketplace</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #6db97f, #4caf50);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 8px;
+            margin-top: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        section {
+            text-align: center;
+            margin: 2rem 0;
+            width: 100%;
+            max-width: 600px;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 2.5rem;
+            margin: 1rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: auto;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            section p {
+                font-size: 1rem;
+            }
+
+            .btn {
+                font-size: 1rem;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Farmers' Marketplace</h1>
+        <p>Your gateway to fresh produce, direct from farmers to you.</p>
+    </header>
+
+    <section>
+        <p>Connecting farmers with consumers to foster a sustainable and thriving marketplace for fresh, local produce.</p>
+        <button class="btn" onclick="window.location.href='sign_up.html'">Sign Up</button>
+        <button class="btn" onclick="window.location.href='log_in.html'">Login</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Farmers' Marketplace | All rights reserved</p>
+    </footer>
+
+</body>
+</html>
